@@ -6,9 +6,14 @@ const baseAPI =
 
 const youtubeService = {
   get(req, res) {
+    console.log(
+      `${baseAPI}&maxResults=${env.maxResults}&playlistId=${env.playlistId}&key=${env.key}`
+    );
+
     request.get(
       `${baseAPI}&maxResults=${env.maxResults}&playlistId=${env.playlistId}&key=${env.key}`,
       (error, response, body) => {
+        if (error) res.status(500).send(error);
         res.send(body);
       }
     );
