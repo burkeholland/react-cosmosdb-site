@@ -6,13 +6,10 @@
   "compounds": [
     {
       "name": "Launch Browser/Server",
-      "configurations": [
-        "Launch Browser",
-        "Launch Server"
-      ]
+      "configurations": ["Launch Browser", "Launch Server"]
     }
-  ],
-  "configurations": [
+  ],
+  "configurations": [
     {
       "type": "chrome",
       "request": "launch",
